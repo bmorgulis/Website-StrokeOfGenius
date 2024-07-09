@@ -3,7 +3,9 @@
 <LINK rel="stylesheet" href="styles.css" type="text/css" />
 </HEAD>
 <BODY>
-<P>THE LOGO</P>
+<div id = "full-header">
+<img src="img/logo.png" alt="logo" id="logo">
 <?php include "menu.php"; ?>
 <HR />
+</div>
 

@@ -57,4 +57,13 @@
 .nav-menu li.dropdown:nth-child(4) .dropdown-content {
   left: -10px;
 }
-
+.nav-menu li a:hover {
+  color: red;
+}
+#logo {
+  width: 150px;
+  height: 150px;
+}
+#full-header {
+    background-color: 272740;
+}
