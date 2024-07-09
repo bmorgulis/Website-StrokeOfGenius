@@ -61,9 +61,32 @@
   color: red;
 }
 #logo {
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
 }
 #full-header {
     background-color: 272740;
 }
+#main-page {
+  width: 950px;
+  padding-left: auto;
+  padding-right: auto;
+  margin: auto;
+  text-align: justify;
+  padding: 200px;
+}
+#footercontact {
+    font-size: 25px;
+    color: AA6FC5;
+}
+#ournamesfooter {
+    font-size: 25px;
+    color: AA6FC5;
+    padding-top: 15px;
+}
+#footerinfo {
+    background-color: 272740;
+    height: auto;
+}
+    
+    

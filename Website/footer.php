@@ -1,7 +1,7 @@
 <HR />
-<P> &copy; 2024 - Binyomin Zev Morgulis & William Feller</P>
-<P><a href="contactus.php">Contact Us</a></P>
-any other footer information
-
+<DIV id="footerinfo">
+<P id="ournamesfooter"> &copy; 2024 - Binyomin Zev Morgulis & William Feller</P>
+<P><a href="contactus.php" id="footercontact">Contact Us</a></P>
+</DIV>
 </BODY>
 </HTML>
