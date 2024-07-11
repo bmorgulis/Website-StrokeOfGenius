@@ -1,3 +1,8 @@
+body {
+  /* font-family: Arial, Helvetica, sans-serif; */
+  margin: 0;
+  padding: 0;
+}
 .nav-menu {
   list-style-type: none;
   margin: 0;
@@ -58,7 +63,7 @@
   left: -10px;
 }
 .nav-menu li a:hover {
-  color: red;
+  color: rgb(255, 0, 238);
 }
 #logo {
   width: 100px;
@@ -66,6 +71,9 @@
 }
 #full-header {
     background-color: 272740;
+    /* height: 145px; */  
+    /* position: fixed;  
+    width: 100%; */
 }
 #main-page {
   width: 950px;
@@ -79,14 +87,12 @@
     font-size: 25px;
     color: AA6FC5;
 }
-#ournamesfooter {
+#footer_names {
     font-size: 25px;
     color: AA6FC5;
     padding-top: 15px;
 }
-#footerinfo {
+#full_footer {
     background-color: 272740;
     height: auto;
 }
-    
-    

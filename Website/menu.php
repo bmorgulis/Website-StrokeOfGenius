@@ -1,5 +1,5 @@
 
-<NAV>   
+<NAV id="full-menu">   
     <ul class="nav-menu">
         <li><a id="small321" href="index.php">Home</a></li>
         <li><a href="about.php">About</a></li>
