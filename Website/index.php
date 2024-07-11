@@ -1,5 +1,5 @@
 <?php include "header.php"; ?>
-<h1 id="main-page">    
+<h1 id="main-page">
     
 Since our debut in 2024, Stroke of Genius has had one thing in mind: to provide 
 our customers with high-quality, tasteful, and beautiful art that would look 

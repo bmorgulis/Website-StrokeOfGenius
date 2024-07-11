@@ -76,12 +76,16 @@ body {
     width: 100%; */
 }
 #main-page {
-  width: 950px;
+  width: 640px;
   padding-left: auto;
   padding-right: auto;
   margin: auto;
   text-align: justify;
   padding: 200px;
+  background-image: url("img/emptyframe.png");
+  background-repeat: no-repeat;
+  background-position: center; 
+  background-size: 770px 770px; 
 }
 #footercontact {
     font-size: 25px;
