@@ -75,6 +75,15 @@ body {
     /* position: fixed;  
     width: 100%; */
 }
+#full-main{
+  background-image: url("img/swirlsbackground.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
 #main-page {
   width: 640px;
   padding-left: auto;
@@ -82,7 +91,7 @@ body {
   margin: auto;
   text-align: justify;
   padding: 200px;
-  background-image: url("img/emptyframe2.jpg");
+  background-image: url("img/emptyframe2.2.jpg");
   background-repeat: no-repeat;
   background-position: center; 
   background-size: 1012px 710px; 
