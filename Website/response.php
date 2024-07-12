@@ -2,8 +2,12 @@
 <?php 
 session_start();
 
-$valid_usernames = ["bzm", "binyomin", "william", "admin"];
-$valid_passwords = ["bzm", "morgulis", "feller", "hello"];
+$valid_credentials = [
+    "bzm" => "bzm",
+    "binyomin" => "morgulis",
+    "william" => "feller",
+    "admin" => "hello"
+];
 
 $username = $_POST["username"]; //gets the username from the form
 $password = $_POST["password"]; //gets the password from the form
@@ -13,10 +17,6 @@ if (in_array($username, $valid_usernames) && in_array($password, $valid_password
     
     $_SESSION["LoggedIn"] = true; //sets the session variable of logged in to true
     echo "<a href='content.php'>Continue to content</a>";
-
-
-
-
     
     // header("Location: content.php"); //redirects to the content page
     exit(); //exits the script
