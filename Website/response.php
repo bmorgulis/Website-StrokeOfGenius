@@ -2,12 +2,14 @@
 <?php 
 session_start();
 
-$valid_credentials = [
-    "bzm" => "bzm",
-    "binyomin" => "morgulis",
-    "william" => "feller",
-    "admin" => "hello"
-];
+// $valid_credentials = [
+//     "bzm" => "bzm",
+//     "binyomin" => "morgulis",
+//     "william" => "feller",
+//     "admin" => "hello"
+// ];
+$valid_usernames = ["bzm", "binyomin", "william", "admin"];
+$valid_passwords = ["bzm", "morgulis", "feller", "hello"];
 
 $username = $_POST["username"]; //gets the username from the form
 $password = $_POST["password"]; //gets the password from the form
