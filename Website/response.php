@@ -14,7 +14,18 @@ $valid_passwords = ["bzm", "morgulis", "feller", "hello"];
 $username = $_POST["username"]; //gets the username from the form
 $password = $_POST["password"]; //gets the password from the form
 
-if (in_array($username, $valid_usernames) && in_array($password, $valid_passwords)) { //checks if the username and password are valid
+
+
+$is_valid_login = false;
+
+foreach ($valid_usernames as $index => $valid_username) {
+    if ($username == $valid_username && $password == $valid_passwords[$index]) {
+        $is_valid_login = true;
+        break;
+    }
+}
+
+if ($is_valid_login) {
     setcookie("username", $username, time() + 7200); //sets a cookie that has the username (expires in 2 hours)
     
     $_SESSION["LoggedIn"] = true; //sets the session variable of logged in to true

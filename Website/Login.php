@@ -8,14 +8,16 @@
     require_once "header.php";
     ?>
 <body class="login-container">
-    <h2>Login</h2>
+    <div = id="login-page">
+    <h1 id="loginText">Login</h1><br><br>
     <form method="POST" action="response.php">
-        <label for="username">Username:</label>
+        <label for="username" id="loginLabel">Username:</label>
         <input type="text" id="username" name="username" required><br><br>
-        <label for="password">Password:</label>
+        <label for="password" id="loginLabel">Password:</label>
         <input type="password" id="password" name="password" required><br><br>
         <input type="submit" value="Login">
     </form>
+    </div>
 </body>
 </html>
 
