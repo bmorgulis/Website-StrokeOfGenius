@@ -5,7 +5,7 @@
 </head>
 <?php
     // session_start();
-    require_once "header.php";
+    require_once "header.php"; 
     ?>
 <body class="login-container">
     <div = id="login-page">
