@@ -1,29 +1,33 @@
 <!-- validates the login information and sets a cookie and session variable if the login is valid -->
-<?php 
-session_start();
+<?php
+session_start(); //starts the session
 
-// $valid_credentials = [
-//     "bzm" => "bzm",
-//     "binyomin" => "morgulis",
-//     "william" => "feller",
-//     "admin" => "hello"
-// ];
-$valid_usernames = ["bzm", "binyomin", "william", "admin"];
-$valid_passwords = ["bzm", "morgulis", "feller", "hello"];
+$servername = "localhost";  
+$username = "root";    
+$password = "";     
+$dbname = "StrokeOfGeniusDB";  
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+echo "Connected successfully";
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+$is_valid_login = false; //sets the variable to false
 
 $username = $_POST["username"]; //gets the username from the form
 $password = $_POST["password"]; //gets the password from the form
 
 
-
-$is_valid_login = false;
-
-foreach ($valid_usernames as $index => $valid_username) {
-    if ($username == $valid_username && $password == $valid_passwords[$index]) {
-        $is_valid_login = true;
-        break;
-    }
+$sql = "SELECT username FROM AuthorizedUsers WHERE username = '" . $username . "' AND password = '" . $password . "';"; // SQL statement to select the username and password from the database
+$result = $conn->query($sql); //executes the SQL statement
+if ($result->num_rows > 0) { //if there are more than 0 rows returned it means that it is a valid login
+    $is_valid_login = true; //sets the variable to true
 }
+$conn->close(); //closes the connection to the database
+
 
 if ($is_valid_login) {
     setcookie("username", $username, time() + 7200); //sets a cookie that has the username (expires in 2 hours)
