@@ -1,12 +1,12 @@
+<?php
+    require_once "header.php"; 
+    ?>
 <!DOCTYPE html>
 <html>
 <head>
     <title>Login</title>
 </head>
-<?php
-    // session_start();
-    require_once "header.php"; 
-    ?>
+
 <body class="login-container">
     <div = id="login-page">
     <h1 id="loginText">Login</h1><br><br>
