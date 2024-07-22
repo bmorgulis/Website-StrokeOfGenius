@@ -54,7 +54,7 @@ if(isset($_POST['submit'])){
 }
 
         ?>
-        <form action="getnewuserinfo" method="post">
+        <form action="getnewuserinfo.php" method="post">
         <h3>Create A New Account</h3>
         <label for="f_name">First Name:  </label>
         <input type="text" id="f_name" name="f_name" value="" required><br><br>

@@ -8,8 +8,8 @@
         <link rel="stylesheet" type="text/css" href="sign_up.css">       
     </head>
     
-    <body>
-        <form action="getnewuserinfo" method="post">
+    <body id="signupbody">
+        <form action="getnewuserinfo.php" method="post" id="newuserform">
         <h3>Create A New Account</h3>
         <label for="f_name">First Name:  </label>
         <input type="text" id="f_name" name="f_name" value="" required><br><br>

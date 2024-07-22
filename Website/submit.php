@@ -24,29 +24,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         header('Location: sign_up.php?error=password_mismatch');
         exit();
     }
-
-    $query = "INSERT INTO accountinfo (fname, lname, email, address)
-    VALUES (?, ?, ?, ?)";
-    $stmt = mysqli_prepare($dbc, $query);
-    mysqli_stmt_bind_param($stmt, "ssss", $first_name, $last_name, $email, $address);
-    mysqli_stmt_execute($stmt);
-    $affected_rows = mysqli_stmt_affected_rows($stmt);
-    if($affected_rows == 1){
-        echo 'User Entered';
-        mysqli_stmt_close($stmt);
-        mysqli_close($dbc);
-    } else {
-        echo 'Error Occurred<br />';
-        echo mysqli_error($dbc);
-        mysqli_stmt_close($stmt);
-        mysqli_close($dbc);
-    }
-} else {
-    echo 'You need to enter the following data<br />';
-    foreach($data_missing as $missing){
-        echo "$missing<br />";
-    }
-
-
 }
 ?>
