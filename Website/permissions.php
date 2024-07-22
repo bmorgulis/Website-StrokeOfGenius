@@ -1,7 +1,3 @@
-<mysql>
 grant insert, select, update on strokeofgenius.* 
-to 'strokeofgenius'@'localhost' 
+to 'strokeofgenius'@'root' 
 identified by '';
-
-
-</mysql>
