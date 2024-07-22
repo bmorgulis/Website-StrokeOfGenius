@@ -111,9 +111,15 @@ font-size: 30px;}
     padding-top: 15px;
 }
 #full_footer {
-    background-color: 272740;
-    height: auto;
+  background-color: #272740;
+  height: auto;
+  /* position: fixed; */
+  bottom: 0;
+  left: 0;
+  width: 100%;
 }
+
+
 .login-container {
   background-color: #f4f4f4;
 }
@@ -171,4 +177,12 @@ font-size: 30px;}
   text-align: center;
   font-size: 26px;
   
+}
+#useraddedpage{
+  background-color: #f4f4f4;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  position: relative;
+  justify-items: center;
+  text-align: left;
+  height: 100vh;
 }

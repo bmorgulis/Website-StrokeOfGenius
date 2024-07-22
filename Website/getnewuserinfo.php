@@ -29,6 +29,4 @@ if($response){
     echo mysqli_error($dbc);
 }
     mysqli_close($dbc);
-    
-
 ?>

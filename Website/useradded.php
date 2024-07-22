@@ -1,8 +1,12 @@
+<?php
+    require_once "header.php"; 
+    ?>
+
 <html>
     <head>
         <title>Add User</title>
     </head>
-    <body>
+    <body id="useraddedpage">
         <?php
         require_once '../mysqli_connect.php';
 if (isset($_POST['submit'])) {
@@ -42,6 +46,7 @@ if (isset($_POST['submit'])) {
                 $address = trim($_POST['address']);
                 break;
         }
+       
 
 
         if(empty($data_missing)){
@@ -52,7 +57,33 @@ if (isset($_POST['submit'])) {
             mysqli_stmt_execute($stmt);
             $affected_rows = mysqli_stmt_affected_rows($stmt);
             if($affected_rows == 1){
-                echo 'User Entered';
+                echo 'User Entered. Thank you for signing up.<br />';
+                # print out only the currect users data from the database that they just entered
+                $query = "Select userid, fname, lname, email, address from accountinfo where email = ?";
+                $stmt = mysqli_prepare($dbc, $query);
+                mysqli_stmt_bind_param($stmt, "s", $email);
+                mysqli_stmt_execute($stmt);
+                mysqli_stmt_bind_result($stmt, $userid, $fname, $lname, $email, $address);
+                mysqli_stmt_fetch($stmt);
+                echo '<table align="left" id="newusertable"
+                cellspacing="5" cellpadding="8">
+                <tr><td align="left"><b>User ID</b></td>
+                <td align="left"><b>First Name</b></td>
+                <td align="left"><b>Last Name</b></td>
+                <td align="left"><b>Email</b></td>
+                <td align="left"><b>Address</b></td></tr>';
+                echo '<tr><td align="left">' .
+                $userid . '</td><td align="left">' .
+                $fname . '</td><td align="left">' .
+                $lname . '</td><td align="left">' .
+                $email . '</td><td align="left">' .
+                $address . '</td><td align="left">';
+                echo '<br></tr>';
+                echo '</table>';
+    
+
+
+
                 mysqli_stmt_close($stmt);
                 mysqli_close($dbc);
             } else {
@@ -69,63 +100,7 @@ if (isset($_POST['submit'])) {
         }
 }
 
-        ?>
-        <form action="getnewuserinfo.php" method="post">
-        <h3>Create A New Account</h3>
-        <label for="f_name">First Name:  </label>
-        <input type="text" id="f_name" name="f_name" value="" required><br><br>
-        
-        <label for="l_name">Last Name:  </label>
-        <input type="text" id="l_name" name="l_name" value="" required><br><br>
-        
-        <label for="email">Email Address:  </label>
-        <input type="text" id="email" name="email" value="" required><br><br>
-        
-        <label for="password">Password:  </label>
-        <input type="password" id="pass" name="pass" value="" required><br><br>
-        
-        <label for="confirm_password">Confirm Password:  </label>
-        <input type="password" id="pass" name="confirm_pass" value="" required><br><br>
-       
-        
-        <label>Gender:</label>
-        <input type="radio" name="gender" value="Male" required>
-        <label for="male">Male</label>
-        <input type="radio" name="gender" value="Female" required>
-        <label for="male">Female</label><br>    
-        
-        <input type="CHECKBOX" name="USresident" checked>I am a US resident.<br><br>
-       
-        <label for="birthday">Birthday:</label>
-        <select id="month" name="month" required>
-            <option value="">Month</option>
-            <?php
-                for ($i = 1; $i <= 12; $i++) {
-                    echo "<option value=\"$i\">$i</option>";
-                }
-            ?>
-        </select>
-            
-        <select id="day" name="day" required>
-            <option value="">Day</option>
-            <?php
-                for ($i = 1; $i <= 31; $i++) {
-                    echo "<option value=\"$i\">$i</option>";
-                }
-            ?>
-        </select>
-        
-        <select id="year" name="year">
-            <option value="">Year</option>
-            <?php
-                for ($i = date("Y"); $i >= 1950; $i--) {
-                    echo "<option value=\"$i\">$i</option>";
-                }
-            ?>    
-        </select><br><br>
- 
-        <input type="submit" name='submit' value="Submit">
-        
-        
-        </form>
+?>
 </html>
+
+<?php include "footer.php"; ?>
