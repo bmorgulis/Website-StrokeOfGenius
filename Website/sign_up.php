@@ -9,7 +9,7 @@
     </head>
     
     <body id="signupbody">
-        <form action="getnewuserinfo.php" method="post" id="newuserform">
+        <form action="useradded.php" method="post" id="newuserform">
         <h3>Create A New Account</h3>
         <label for="f_name">First Name:  </label>
         <input type="text" id="f_name" name="f_name" value="" required><br><br>

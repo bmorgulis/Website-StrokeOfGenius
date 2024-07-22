@@ -4,32 +4,48 @@
     </head>
     <body>
         <?php
-if(isset($_POST['submit'])){
-    $data_missing = array();
-        if(empty($_POST['f_name'])){
-            $data_missing[] = 'First Name';
-        } else {
-            $f_name = trim($_POST['f_name']);
+        require_once '../mysqli_connect.php';
+if (isset($_POST['submit'])) {
+    $data_missing = [];
+        switch(true) {
+            case empty($_POST['f_name']):
+                $data_missing[] = 'First Name';
+                break;
+            default:
+                $f_name = trim($_POST['f_name']);
+                break;
         }
-        if(empty($l_name)){
-            $data_missing[] = 'Last Name';
-        } else {
-            $l_name = trim($_POST['l_name']);
+        
+        switch(true) {
+            case empty($_POST['l_name']):
+                $data_missing[] = 'Last Name';
+                break;
+            default:
+                $l_name = trim($_POST['l_name']);
+                break;
         }
-        if(empty($email)){
-            $data_missing[] = 'Email';
-        } else {
-            $email = trim($_POST['email']);
+        
+        switch(true) {
+            case empty($_POST['email']):
+                $data_missing[] = 'Email';
+                break;
+            default:
+                $email = trim($_POST['email']);
+                break;
         }
-        if(empty($address)){
-            $data_missing[] = 'Address';
-        } else {
-            $address = trim($_POST['address']);
+        
+        switch(true) {
+            case empty($_POST['address']):
+                $data_missing[] = 'Address';
+                break;
+            default:
+                $address = trim($_POST['address']);
+                break;
         }
 
 
         if(empty($data_missing)){
-            require_once('../mysqli_connect.php');
+            require_once '../mysqli_connect.php';
             $query = "INSERT INTO accountinfo (fname, lname, email, address) VALUES (?, ?, ?, ?)";
             $stmt = mysqli_prepare($dbc, $query);
             mysqli_stmt_bind_param($stmt, "ssss", $f_name, $l_name, $email, $address);
