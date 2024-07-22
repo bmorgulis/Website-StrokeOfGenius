@@ -1,8 +1,12 @@
 <?php
+require_once 'mysqli_connect.php';
+
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $first_name = htmlspecialchars($_POST['f_name']);
     $last_name = htmlspecialchars($_POST['l_name']);
     $email = htmlspecialchars($_POST['email']);
+    $address = htmlspecialchars($_POST['address']);
     $password = htmlspecialchars($_POST['pass']);
     $confirm_password = htmlspecialchars($_POST['confirm_pass']);
     $gender = htmlspecialchars($_POST['gender']);
@@ -20,16 +24,29 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         header('Location: sign_up.php?error=password_mismatch');
         exit();
     }
-    
-     
-//     echo "<h1>Successful</h1>";
-//     echo "First Name: $first_name<br>";
-//     echo "Last Name: $last_name<br>";
-//     echo "Email: $email<br>";
-//     echo "Gender: $gender<br>";
-//     echo "US Resident: $USresident<br>";
-//     echo "Birthday: $birthday<br>";
-// } else {
-//     echo "Unsuccessfull. Try again.";
+
+    $query = "INSERT INTO accountinfo (fname, lname, email, address)
+    VALUES (?, ?, ?, ?)";
+    $stmt = mysqli_prepare($dbc, $query);
+    mysqli_stmt_bind_param($stmt, "ssss", $first_name, $last_name, $email, $address);
+    mysqli_stmt_execute($stmt);
+    $affected_rows = mysqli_stmt_affected_rows($stmt);
+    if($affected_rows == 1){
+        echo 'User Entered';
+        mysqli_stmt_close($stmt);
+        mysqli_close($dbc);
+    } else {
+        echo 'Error Occurred<br />';
+        echo mysqli_error($dbc);
+        mysqli_stmt_close($stmt);
+        mysqli_close($dbc);
+    }
+} else {
+    echo 'You need to enter the following data<br />';
+    foreach($data_missing as $missing){
+        echo "$missing<br />";
+    }
+
+
 }
 ?>
