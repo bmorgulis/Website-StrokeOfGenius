@@ -18,10 +18,10 @@ if ($conn->connect_error) {
 $is_valid_login = false; //sets the variable to false
 
 $username = $_POST["username"]; //gets the username from the form
-$password = $_POST["password"]; //gets the password from the form
+$password = $_POST["password"]; //gets the password from the form 
 
 
-$sql = "SELECT username FROM AuthorizedUsers WHERE username = '" . $username . "' AND password = '" . $password . "';"; // SQL statement to select the username and password from the database
+$sql = "SELECT username FROM accountinfo WHERE username = '" . $username . "' AND password = '" . $password . "';"; // SQL statement to select the username and password from the database
 $result = $conn->query($sql); //executes the SQL statement
 if ($result->num_rows > 0) { //if there are more than 0 rows returned it means that it is a valid login
     $is_valid_login = true; //sets the variable to true

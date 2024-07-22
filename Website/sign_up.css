@@ -3,6 +3,7 @@ body {
     justify-content: center;
     align-items: center;
     margin: 0;
+    text-align: center;
     
 }
 .container {
@@ -21,7 +22,7 @@ input[type="text"],
 input[type="email"],
 input[type="password"],
 select {
-    width: 100%;
+    width: 30%;
     padding: 10px;
     margin-bottom: 10px;
     border: 1px solid #ddd;
@@ -62,11 +63,6 @@ input[type="checkbox"] {
     color: #333;
     text-size-adjust: 110%;
   }
-  
-
-
-
-
 #footercontact {
     font-size: 25px;
     color: AA6FC5;

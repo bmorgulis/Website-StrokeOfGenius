@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 22, 2024 at 05:17 AM
+-- Generation Time: Jul 22, 2024 at 10:57 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -29,6 +29,8 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `accountinfo` (
   `userid` int(255) NOT NULL,
+  `username` varchar(30) NOT NULL,
+  `password` varchar(30) NOT NULL,
   `fname` varchar(25) NOT NULL,
   `lname` varchar(25) NOT NULL,
   `email` varchar(25) NOT NULL,
@@ -39,31 +41,9 @@ CREATE TABLE `accountinfo` (
 -- Dumping data for table `accountinfo`
 --
 
-INSERT INTO `accountinfo` (`userid`, `fname`, `lname`, `email`, `address`) VALUES
-(1, 'binyomin', 'morgulis', 'bzm@gmail.com', '7601 147th street'),
-(2, 'william', 'feller', 'wfeller@gmail.com', '4321 45th ave');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `authorizedusers`
---
-
-CREATE TABLE `authorizedusers` (
-  `userid` varchar(255) NOT NULL,
-  `username` varchar(25) NOT NULL,
-  `password` varchar(25) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `authorizedusers`
---
-
-INSERT INTO `authorizedusers` (`userid`, `username`, `password`) VALUES
-('1', 'binyomin', 'morgulis'),
-('2', 'william', 'feller'),
-('', 'bzm', 'bzm'),
-('', 'admin', 'hello');
+INSERT INTO `accountinfo` (`userid`, `username`, `password`, `fname`, `lname`, `email`, `address`) VALUES
+(1, 'binyomin', 'morgulis', 'binyomin', 'morgulis', 'bzm@gmail.com', '5432 134th street'),
+(2, 'william', 'feller', 'william', 'feller', 'wfeller@gmail.com', '4321 45th ave');
 
 -- --------------------------------------------------------
 
@@ -119,6 +99,16 @@ CREATE TABLE `sortby` (
 --
 ALTER TABLE `accountinfo`
   ADD PRIMARY KEY (`userid`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `accountinfo`
+--
+ALTER TABLE `accountinfo`
+  MODIFY `userid` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -1,3 +1,4 @@
+<?php require_once "header.php"; ?>
 <!-- checks if the user is logged in and displays the content if they are or error if not -->
 <?php
 session_start();
@@ -26,4 +27,4 @@ header("Location: login.php");//redirects to the login page
 
 </body>
 
-</html>
+</html> 

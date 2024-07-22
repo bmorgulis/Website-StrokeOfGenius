@@ -10,7 +10,11 @@
     
     <body id="signupbody">
         <form action="useradded.php" method="post" id="newuserform">
-        <h3>Create A New Account</h3>
+        <h2>Create A New Account</h2><br>
+
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" value="" required><br><br>
+
         <label for="f_name">First Name:  </label>
         <input type="text" id="f_name" name="f_name" value="" required><br><br>
         
@@ -46,7 +50,7 @@
                     echo "<option value=\"$i\">$i</option>";
                 }
             ?>
-        </select>
+        </select><br><br>
             
         <select id="day" name="day" required>
             <option value="">Day</option>
@@ -55,7 +59,7 @@
                     echo "<option value=\"$i\">$i</option>";
                 }
             ?>
-        </select>
+        </select><br><br>
         
         <select id="year" name="year">
             <option value="">Year</option>
