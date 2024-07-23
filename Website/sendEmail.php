@@ -1,4 +1,4 @@
-<!-- mail2.php is connected to this page -->
+<!-- Contact Us.php is connected to this page -->
 <?php
 use PHPMailer\PHPMailer\PHPMailer;
 

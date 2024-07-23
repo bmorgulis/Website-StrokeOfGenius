@@ -1,4 +1,4 @@
-<!-- sendemail.php is connected to this page -->
+sendemail.php is connected to this page
 <!DOCTYPE html>
 <html>
 <head>
