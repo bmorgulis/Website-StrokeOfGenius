@@ -4,7 +4,6 @@ body {
     align-items: center;
     margin: 0;
     text-align: center;
-    
 }
 .container {
     background-color: #fff;
@@ -73,4 +72,3 @@ input[type="checkbox"] {
     background-color: 272740;
     height: auto;
 }
-
