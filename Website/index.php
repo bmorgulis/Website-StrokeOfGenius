@@ -8,7 +8,7 @@ great in the studio, and in your sitting room. We aim to provide a superior
 shopping experience, and we are confident that you will be pleased with our products.
 </h1>
 
-<br><br><br><br><br><br><br><br>
+<br><br><br><br>
 
 
 </div>
