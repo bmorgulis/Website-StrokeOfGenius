@@ -1,7 +1,14 @@
 <?php include "header.php"; ?>
 <div id="full-main">
+  
 <h1 id="main-page">
-    
+<div id="titlespeed">
+  <h1 id="titletext">Starting...</h1>
+  <div>
+    <label for="speed"></label>
+  </div>
+  <script src="titletext.js"></script>
+  </div>
 Since our debut in 2024, Stroke of Genius has had one thing in mind: to provide 
 our customers with high-quality, tasteful, and beautiful art that would look 
 great in the studio, and in your sitting room. We aim to provide a superior 
