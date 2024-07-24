@@ -9,6 +9,7 @@
     </head>
     
     <body id="signupbody">
+        <div class="signupdiv">
         <form action="useradded.php" method="post" id="newuserform">
         <h2>Create A New Account</h2><br>
 
@@ -74,7 +75,7 @@
         
         
         </form>
-        
+        </div>
     </body>
     
 </html>

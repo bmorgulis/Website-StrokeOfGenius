@@ -3,7 +3,6 @@ body {
     justify-content: center;
     align-items: center;
     margin: 0;
-    text-align: center;
 }
 .container {
     background-color: #fff;
@@ -71,4 +70,8 @@ input[type="checkbox"] {
 #full_footer {
     background-color: 272740;
     height: auto;
+}
+
+.signupdiv{
+    text-align: center;
 }

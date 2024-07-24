@@ -26,6 +26,7 @@
         <p>Message</p>
         <textarea id="body" rows="10" placeholder="Type Message" class="contacttext"></textarea><br><br>
         <button type="button" onclick="sendEmail()" value="Send an Email">Submit</button>
+        <br><br><br><br>
 
 
     </form></center>
