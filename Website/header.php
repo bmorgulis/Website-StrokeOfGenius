@@ -10,7 +10,7 @@
 <div id = "full-header">
 <img src="img/logo.png" alt="logo" id="logo">
 <!-- moving brush start -->
-<img class="brush" src="img/brush1.jpeg" alt="A brush moving across the screen" />
+<img class="brush" src="img/brush2.png" alt="A brush moving across the screen" />
 <!-- moving brush end -->
 <?php 
 include "menu.php";  
