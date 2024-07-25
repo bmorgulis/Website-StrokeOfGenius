@@ -195,6 +195,11 @@ font-size: 30px;}
   width: 25%;
 }
 
+.rsslidesdiv {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Remove this line if vertical centering is not needed */
+}
 
 .rslides {
   position: relative;
