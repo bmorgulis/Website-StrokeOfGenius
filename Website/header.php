@@ -1,11 +1,11 @@
 <HTML>
 <HEAD>
 <LINK rel="stylesheet" href="styles.css" type="text/css"/>
+<link rel="stylesheet" href="css/slimmenu.min.css" type="text/css">
+
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 <script src="responsiveslides.min.js"></script>
-
-
-</HEAD>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="scriptorigin="anonymous"></script>
 <BODY>
 <div id = "full-header">
 <img src="img/logo.png" alt="logo" id="logo">
