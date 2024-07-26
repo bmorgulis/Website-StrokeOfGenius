@@ -1,6 +1,6 @@
 
 <NAV id="full-menu">   
-    <ul class="nav-menu" >
+    <ul class="nav-menu" id="navigation" class="slimmenu">
         <li><a id="small321" href="index.php">Home</a></li>
         <li><a href="about.php">About</a></li>
         <li><a href="products.php">Products</a></li>
@@ -10,15 +10,7 @@
     </ul>
 </NAV>
 
-<nav >
-<ul id="navigation" class="slimmenu">
-    <li><a id="small321" href="index.php">Home</a></li>
-    <li><a href="about.php">About</a></li>
-    <li><a href="products.php">Products</a></li>
-    <li><a href="contactus.php">Contact Us</a></li>
-    <li><a href="sign_up.php">Sign Up</a></li>
-</ul>
-</nav>
+
 <script src="js/jquery.slimmenu.min.js"></script>
 
 <script>
