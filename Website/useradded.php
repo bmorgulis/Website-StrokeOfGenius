@@ -27,6 +27,7 @@ if (isset($_POST['submit'])) {
                 $password = trim($_POST['pass']);
                 break;
         }
+       
 
         switch(true) {
             case empty($_POST['f_name']):
@@ -121,4 +122,12 @@ if (isset($_POST['submit'])) {
 ?>
 </html>
 
+
 <?php include "footer.php"; ?>
+<style>
+    #full_footer{
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+    }
+</style>

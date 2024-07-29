@@ -22,6 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
     if($password !== $confirm_password){
         header('Location: sign_up.php?error=password_mismatch');
+        echo("Passwords do not match");
         exit();
     }
 }
