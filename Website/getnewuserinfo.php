@@ -1,4 +1,19 @@
 <?php
+session_start(); // Start the session
+
+// Check if the user is logged in
+if (!isset($_SESSION["LoggedIn"]) || $_SESSION["LoggedIn"] !== true) {
+    header("Location: login.php"); // Redirect to login page if not logged in
+    exit();
+}
+
+// Check if the logged-in user is the admin
+if (!isset($_COOKIE["username"]) || $_COOKIE["username"] !== "admin") {
+    echo "<p>Access denied. You do not have permission to access this page.</p>";
+    echo "<a href='login.php'>Go to login page</a>";
+    exit();
+}
+
 require_once '../mysqli_connect.php';
 
 $query = "Select userid, username, password, fname, lname, email, address from accountinfo ";
@@ -34,3 +49,20 @@ if($response){
 }
     mysqli_close($dbc);
 ?>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Get All User's Info</title>
+    </head>
+    <body>
+        <button onclick="window.location.href='index.php'">Back to Home</button>
+        <!-- timmer that will redirect to the index.php page after 30 seconds -->
+        <script>
+            setTimeout(function(){
+                window.location.href = 'login.php';
+            }, 30000);
+        </script>
+    </body>
+</html>
+
+

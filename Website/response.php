@@ -26,6 +26,12 @@ $result = $conn->query($sql); //executes the SQL statement
 if ($result->num_rows > 0) { //if there are more than 0 rows returned it means that it is a valid login
     $is_valid_login = true; //sets the variable to true
 }
+# if the username is 'admin' and the password is 'morgulis' then go to the admin page called  admin.php
+if ($username == "admin" && $password == "morgulis") {
+    setcookie("username", $username, time() + 30); //sets a cookie that has the username (expires in 10 seconds)
+    header("Location: admin.php");
+    exit();
+}
 $conn->close(); //closes the connection to the database
 
 
