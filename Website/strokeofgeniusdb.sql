@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 22, 2024 at 10:57 PM
+-- Generation Time: Aug 01, 2024 at 04:46 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -43,7 +43,8 @@ CREATE TABLE `accountinfo` (
 
 INSERT INTO `accountinfo` (`userid`, `username`, `password`, `fname`, `lname`, `email`, `address`) VALUES
 (1, 'binyomin', 'morgulis', 'binyomin', 'morgulis', 'bzm@gmail.com', '5432 134th street'),
-(2, 'william', 'feller', 'william', 'feller', 'wfeller@gmail.com', '4321 45th ave');
+(2, 'william', 'feller', 'william', 'feller', 'wfeller@gmail.com', '4321 45th ave'),
+(76, 'admin', 'morgulis', '', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -53,8 +54,15 @@ INSERT INTO `accountinfo` (`userid`, `username`, `password`, `fname`, `lname`, `
 
 CREATE TABLE `cart` (
   `userid` int(255) NOT NULL,
-  `items` varchar(255) NOT NULL
+  `itemid` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `cart`
+--
+
+INSERT INTO `cart` (`userid`, `itemid`) VALUES
+(1, 3);
 
 -- --------------------------------------------------------
 
@@ -75,9 +83,18 @@ CREATE TABLE `categories` (
 --
 
 CREATE TABLE `products` (
-  `itemid` varchar(50) NOT NULL,
-  `numavailable` int(5) NOT NULL
+  `itemid` int(50) NOT NULL,
+  `productimgpath` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `products`
+--
+
+INSERT INTO `products` (`itemid`, `productimgpath`) VALUES
+(1, 'img/item1.jpg'),
+(2, 'img/item2.jpg'),
+(3, 'img/item3.jpg');
 
 -- --------------------------------------------------------
 
@@ -101,6 +118,12 @@ ALTER TABLE `accountinfo`
   ADD PRIMARY KEY (`userid`);
 
 --
+-- Indexes for table `products`
+--
+ALTER TABLE `products`
+  ADD PRIMARY KEY (`itemid`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -108,7 +131,13 @@ ALTER TABLE `accountinfo`
 -- AUTO_INCREMENT for table `accountinfo`
 --
 ALTER TABLE `accountinfo`
-  MODIFY `userid` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
+  MODIFY `userid` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=109;
+
+--
+-- AUTO_INCREMENT for table `products`
+--
+ALTER TABLE `products`
+  MODIFY `itemid` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

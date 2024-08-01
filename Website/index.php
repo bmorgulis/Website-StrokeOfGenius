@@ -2,8 +2,8 @@
 <div id="full-main">
   
 <h1 id="main-page">
-<div id="titlespeed">
-  <h1 id="titletext">Starting...</h1>
+<div id="titlespeed"> 
+  <h1 id="titletext">Starting...</h1> 
   <div>
     <label for="speed"></label>
   </div>
