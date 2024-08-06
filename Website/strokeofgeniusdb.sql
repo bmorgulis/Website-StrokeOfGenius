@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 06, 2024 at 06:57 PM
+-- Generation Time: Aug 06, 2024 at 07:03 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -44,8 +44,7 @@ CREATE TABLE `accountinfo` (
 INSERT INTO `accountinfo` (`userid`, `username`, `password`, `fname`, `lname`, `email`, `address`) VALUES
 (1, 'binyomin', 'morgulis', 'binyomin', 'morgulis', 'bzm@gmail.com', '5432 134th street'),
 (2, 'william', 'feller', 'william', 'feller', 'wfeller@gmail.com', '4321 45th ave'),
-(76, 'admin', 'morgulis', '', '', '', ''),
-(141, 'n', 'o', 'm', 'n', 'b', 'v');
+(76, 'admin', 'morgulis', '', '', '', '');
 
 -- --------------------------------------------------------
 
