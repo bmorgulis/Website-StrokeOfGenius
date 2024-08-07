@@ -3,6 +3,7 @@ require_once "header.php";
 ?>
 <html>
 <body>
+<section class="bg" id="bg2">
     <div class="product-container">
         <h1 id="projecthead">Products</h1>
         <div class="products_page">
@@ -43,10 +44,11 @@ require_once "header.php";
                 // Close the connection
                 $dbc->close();
             ?>
+            </section>
         </div>
     </div>
 </body>
 </html>    
-
+<script src="blur.js"></script>
 
 <?php include "footer.php";

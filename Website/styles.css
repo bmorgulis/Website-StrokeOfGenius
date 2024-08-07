@@ -153,16 +153,19 @@ font-size: 30px;}
   grid-gap: 20px;
   text-align: center;
   font-size: 26px;
-
+  background-color: #f4f4f4;
 }
+
 #projectheader {
   text-align: center;
   color: #333;
   text-size-adjust: 110%;
 }
-
-
-
+h1#projecthead{
+  margin: 0px;
+  background-color: #f4f4f4;
+padding: 32.370px;
+}
 
 .products_page {
   background-color: #f4f4f4;

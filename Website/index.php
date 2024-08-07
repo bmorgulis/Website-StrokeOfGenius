@@ -1,6 +1,6 @@
 <?php include "header.php"; ?>
 <div id="full-main">
-  
+
 <h1 id="main-page">
 <div id="titlespeed"> 
   <h1 id="titletext">Starting...</h1> 
@@ -9,6 +9,7 @@
   </div>
   <script src="titletext.js"></script>
   </div>
+  <section class="bg">
 Since our debut in 2024, Stroke of Genius has had one thing in mind: to provide 
 our customers with high-quality, tasteful, and beautiful art that would look 
 great in the studio, and in your sitting room. We aim to provide a superior 
@@ -16,7 +17,7 @@ shopping experience, and we are confident that you will be pleased with our prod
 </h1>
 
 <br><br><br><br>
-
+</section>
 
 </div>
 <div class="rsslidesdiv">
@@ -51,6 +52,7 @@ $(".rslides").responsiveSlides({
   after: function(){}     // Function: After callback
 });
 </script>
+<script src="blur.js"></script>
 </div>
 <?php include "footer.php"; ?>
 
