@@ -3,6 +3,7 @@ body {
   padding: 0;
 }
 .nav-menu {
+  font-family: 'Roboto', sans-serif;
   list-style-type: none;
   margin: 0;
   padding: 0;
