@@ -9,7 +9,7 @@
 </head>
 
 <body id="signupbody">
-    <div class="signupdiv">
+    <div class="signupdiv"> 
     <form action="useradded.php" method="post" id="newuserform" onsubmit="return validatePassword()">
     <h2>Create A New Account</h2><br>
 
